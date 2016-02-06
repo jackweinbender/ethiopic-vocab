@@ -1,0 +1,17 @@
+<h3 class="display-2">{{model.title.$t}}</h3>
+<p>by
+	{{#each model.author as |author|}}
+		<a href="mailto:{{author.email.$t}}">{{author.name.$t}}</a>
+	{{/each}}
+</p>
+<div class="wrapper">
+	{{#each model.roots as |root|}}
+	<div class="row">
+		<span>{{root.root}}</span> -
+		{{#each root.entries as |entry|}}
+			<span>{{entry.ethiopic}}</span>
+			<span>{{entry.gloss}}</span>
+		{{/each}}
+		</div>
+	{{/each}}
+</div>
