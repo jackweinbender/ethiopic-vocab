@@ -1,17 +1,23 @@
-<h3 class="display-2">{{model.title.$t}}</h3>
-<p>by
-	{{#each model.author as |author|}}
-		<a href="mailto:{{author.email.$t}}">{{author.name.$t}}</a>
-	{{/each}}
-</p>
-<div class="wrapper">
-	{{#each model.roots as |root|}}
-	<div class="row">
-		<span>{{root.root}}</span> -
-		{{#each root.entries as |entry|}}
-			<span>{{entry.ethiopic}}</span>
-			<span>{{entry.gloss}}</span>
-		{{/each}}
-		</div>
-	{{/each}}
+<div class="row">
+	<h3 class="display-2">{{model.title.$t}}</h3>
 </div>
+<div class="row">
+	<p>by
+		{{#each model.author as |author|}}
+			<a href="mailto:{{author.email.$t}}">{{author.name.$t}}</a>
+		{{/each}}
+	</p>
+</div>
+	<div class="row">
+		{{#each model.roots as |root|}}
+		<div class="col-xs-2">
+			<strong><em>{{root.root}}</em></strong> -
+		</div>
+		<div class="col-xs-10">
+			{{#each root.entries as |entry|}}
+				<span class="label" style="background-color:#eee;color:black;"><em>{{entry.ethiopic}}</em></span>
+				<span>{{entry.gloss}}</span>
+			{{/each}}
+		</div>
+		{{/each}}
+	</div>
