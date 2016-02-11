@@ -1,12 +1,107 @@
 * {
   font-family: "Linux Libertine O", "Times New Roman", serif;
+  box-sizing: border-box;
 }
 .root-component {
-
+  position: relative;
+  padding:0.125rem 0;
 }
 .root-label {
+  position: absolute;
+    top:0;
+    left:0;
+  width:4rem;
+  font-weight: bold;
+  font-style: italic;
 
 }
 
 .root-content {
+  display: inline-block;
+  padding-right: 4rem;
+  max-width: 66em;
+  position: relative;
+    left:4rem;
+  padding-left: 2rem;
+  text-indent: -2rem;
+}
+.entry-component {
+
+}
+.entry-head {
+  border-radius:0.25rem;
+  border: solid 1px #ccc;
+  margin-right:4px;
+}
+
+.entry-entry {
+  font-style: italic;
+  padding:0 4px 0 0;
+}
+
+.entry-gloss {
+
+}
+
+$green: #ccffcc;
+$red: #ffcccc;
+$orange: #ffe6cc;
+$yellow: #ffffcc;
+$grey: #ddd;
+
+%pos {
+  background-color: $grey;
+  padding:0 3px;
+  &::after{
+    content: ':';
+  }
+}
+.pos-G{
+  @extend %pos;
+  background-color: $green;
+  font-weight: bold;
+}
+.pos-tG{
+  @extend %pos;
+  background-color: $green;
+  font-style: italic;
+}
+.pos-tGL{
+  @extend %pos;
+  background-color: $green;
+}
+.pos-CG{
+  @extend %pos;
+  background-color: $green;
+}
+
+.pos-adj {
+  @extend %pos;
+  font-weight: bold;
+  background-color: $orange;
+}
+.pos-n {
+  @extend %pos;
+  font-weight: bold;
+  background-color: $red;
+}
+.pos-prep {
+  @extend %pos;
+  font-weight: bold;
+  background-color: $yellow;
+}
+.pos-adv {
+  @extend %pos;
+}
+.pos-other {
+  @extend %pos;
+}
+.pos-pron {
+  @extend %pos;
+}
+.pos-conj {
+  @extend %pos;
+}
+.pos-other {
+  @extend %pos;
 }
