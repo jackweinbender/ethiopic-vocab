@@ -1,0 +1,8 @@
+<div class="root-label">{{root.root}}</div>
+<div class="root-content">
+  {{#each root.entries as |entry|}}
+    {{entry-component entry=entry}}
+  {{/each}}
+
+  {{yield}}
+</div>

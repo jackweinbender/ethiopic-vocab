@@ -48,7 +48,27 @@ export default Ember.Route.extend({
             }
         }).map(function(root){
         	root.entries.sort(function(a, b){
-          	var order = ['verb', 'prep', 'adj', 'noun', 'adv', 'other'];
+          	var order = [
+              "G",
+              "D",
+              "L",
+              "Q/L",
+              "CG",
+              "CD",
+              "CL",
+              "CQ",
+              "tG",
+              "tD",
+              "tL",
+              "tQ",
+              "tQL",
+              "tGL",
+              "tCGL",
+              'prep',
+              'adj',
+              'n',
+              'adv',
+              'other'];
             var foo = order.indexOf(a.pos);
             var bar = order.indexOf(b.pos);
             if(foo < bar){return -1}
@@ -87,15 +107,18 @@ function getRootOrder(char){
     "ḍ",
     "f",
     "g",
+    "gʷ",
     "h",
     "ḥ",
     "k",
+    "kʷ",
     "l",
     "m",
     "n",
     "p",
     "ṗ",
     "q",
+    "qʷ",
     "r",
     "s",
     "š",
@@ -104,6 +127,7 @@ function getRootOrder(char){
     "ṭ",
     "w",
     "x",
+    "xʷ",
     "y",
     "z"
   ];
