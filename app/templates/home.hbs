@@ -1,10 +1,5 @@
 <div class="heading">
 	<h3 class="display-2">{{model.title.$t}}</h3>
-	<p>by
-		{{#each model.author as |author|}}
-			<a href="mailto:{{author.email.$t}}">{{author.name.$t}}</a>
-		{{/each}}
-	</p>
 </div>
 <div class="body-text">
 		{{#each model.roots as |root|}}

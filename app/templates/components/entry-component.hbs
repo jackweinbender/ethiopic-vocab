@@ -1,6 +1,9 @@
 <span class="entry-head">
   <span class="pos-{{entry.pos}}">{{entry.pos}}</span>
   <span class="entry-entry">{{entry.ethiopic}}</span>
+  {{#if entry.morph}}
+    (<span class="entry-entry">{{entry.morph}}</span>)
+  {{/if}}
 </span>
 <span clas="entry-gloss">{{entry.gloss}}</span>
 {{yield}}
